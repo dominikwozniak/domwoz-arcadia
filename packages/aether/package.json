@@ -1,11 +1,28 @@
 {
-  "name": "aether",
+  "name": "@repo/aether",
   "version": "0.0.0",
   "private": true,
+  "main": "./src/index.ts",
+  "react-native": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
   "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "19.1.1",
+    "eslint": "^9.34.0",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.4"
   }
 }
