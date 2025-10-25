@@ -1,5 +1,5 @@
 import { Image } from "expo-image";
-import { Platform, StyleSheet } from "react-native";
+import { Platform, StyleSheet, View, Text } from "react-native";
 import { aether } from "@repo/aether";
 
 import { HelloWave } from "~/components/hello-wave";
@@ -38,6 +38,22 @@ export default function HomeScreen() {
           </ThemedText>{" "}
           to open developer tools.
         </ThemedText>
+        <View className="mt-4 p-4 border border-dashed border-gray-500">
+          <Text>TEST</Text>
+        </View>
+
+        {/* Test Aether Theme Variables */}
+        <View className="mt-aether-md p-aether-lg bg-aether-primary rounded-lg">
+          <Text className="text-white font-bold mb-aether-sm">
+            Aether Primary Color
+          </Text>
+          <View className="bg-aether-secondary p-aether-sm rounded">
+            <Text className="text-white">Secondary Color</Text>
+          </View>
+          <View className="bg-aether-accent p-aether-sm rounded mt-aether-sm">
+            <Text className="text-white">Accent Color</Text>
+          </View>
+        </View>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <Link href="/modal">

@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+@theme {
+  /* Aether Test Colors */
+  --color-aether-primary: #6366f1;
+  --color-aether-secondary: #8b5cf6;
+  --color-aether-accent: #ec4899;
+
+  /* Aether Test Spacing */
+  --spacing-aether-sm: 0.5rem;
+  --spacing-aether-md: 1rem;
+  --spacing-aether-lg: 2rem;
+}

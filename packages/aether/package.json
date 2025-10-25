@@ -6,7 +6,8 @@
   "react-native": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./*": "./src/*.ts"
+    "./*": "./src/*.ts",
+    "./tailwind/theme.css": "./src/tailwind/theme.css"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -23,6 +24,8 @@
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-native": "0.81.4"
+    "react-native": "0.81.4",
+    "tailwindcss": "^4.1.16",
+    "uniwind": "1.0.0-rc.5"
   }
 }

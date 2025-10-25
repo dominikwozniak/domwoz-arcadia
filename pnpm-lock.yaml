@@ -135,6 +135,12 @@ importers:
       react-native-worklets:
         specifier: 0.5.1
         version: 0.5.1(@babel/core@7.28.4)(react-native@0.81.4(@babel/core@7.28.4)(@types/react@19.1.0)(react@19.1.0))(react@19.1.0)
+      tailwindcss:
+        specifier: ^4.1.16
+        version: 4.1.16
+      uniwind:
+        specifier: 1.0.0-rc.5
+        version: 1.0.0-rc.5(chalk@4.1.2)(lightningcss@1.30.2)(postcss@8.4.49)(react-native@0.81.4(@babel/core@7.28.4)(@types/react@19.1.0)(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.16)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -10545,6 +10551,19 @@ snapshots:
   unique-string@2.0.0:
     dependencies:
       crypto-random-string: 2.0.0
+
+  uniwind@1.0.0-rc.5(chalk@4.1.2)(lightningcss@1.30.2)(postcss@8.4.49)(react-native@0.81.4(@babel/core@7.28.4)(@types/react@19.1.0)(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.16):
+    dependencies:
+      '@tailwindcss/node': 4.1.14
+      '@tailwindcss/oxide': 4.1.14
+      chalk: 4.1.2
+      chokidar: 4.0.3
+      culori: 4.0.2
+      lightningcss: 1.30.2
+      postcss: 8.4.49
+      react: 19.1.0
+      react-native: 0.81.4(@babel/core@7.28.4)(@types/react@19.1.0)(react@19.1.0)
+      tailwindcss: 4.1.16
 
   uniwind@1.0.0-rc.5(chalk@4.1.2)(lightningcss@1.30.2)(postcss@8.4.49)(react-native@0.81.4(@babel/core@7.28.4)(@types/react@19.2.2)(react@19.1.0))(react@19.1.0)(tailwindcss@4.1.16):
     dependencies:

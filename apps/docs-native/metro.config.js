@@ -1,5 +1,7 @@
 // Learn more https://docs.expo.io/guides/customizing-metro
 const { getDefaultConfig } = require("expo/metro-config");
+const { withUniwindConfig } = require("uniwind/metro");
+
 const path = require("path");
 
 // Find the workspace root
@@ -20,4 +22,7 @@ config.resolver.nodeModulesPaths = [
 // 3. Force Metro to resolve (sub)dependencies only from the `nodeModulesPaths`
 config.resolver.disableHierarchicalLookup = true;
 
-module.exports = config;
+module.exports = withUniwindConfig(config, {
+  cssEntryFile: "./src/globals.css",
+  dtsFile: './src/uniwind-types.d.ts'
+});
