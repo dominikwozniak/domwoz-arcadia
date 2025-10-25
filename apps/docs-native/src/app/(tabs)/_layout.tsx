@@ -35,6 +35,8 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen name="storybook" options={{ headerShown: false }} />
     </Tabs>
   );
 }
