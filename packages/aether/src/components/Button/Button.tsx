@@ -1,7 +1,7 @@
 import React from 'react';
-import { Pressable, Text, type PressableProps } from 'react-native';
+import { Text, TouchableOpacity, type TouchableOpacityProps } from 'react-native';
 
-export interface ButtonProps extends Omit<PressableProps, 'children'> {
+export interface ButtonProps extends Omit<TouchableOpacityProps, 'children'> {
   /**
    * Button text
    */
@@ -49,7 +49,7 @@ export function Button({
   }`;
 
   return (
-    <Pressable
+    <TouchableOpacity
       className={buttonClass}
       disabled={disabled}
       {...props}
@@ -57,6 +57,6 @@ export function Button({
       <Text className="text-white font-bold text-center">
         {title}
       </Text>
-    </Pressable>
+    </TouchableOpacity>
   );
 }

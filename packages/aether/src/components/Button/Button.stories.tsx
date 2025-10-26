@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-native';
+import { fn } from 'storybook/test';
 import { Button } from './Button';
 
 const meta = {
-  title: 'Aether/Button',
+  title: '@aether/Button',
   component: Button,
   argTypes: {
     variant: {
@@ -22,7 +23,7 @@ const meta = {
   },
   args: {
     title: 'Button',
-    onPress: () => console.log('Button pressed'),
+    onPress: fn(),
   },
 } satisfies Meta<typeof Button>;
 
