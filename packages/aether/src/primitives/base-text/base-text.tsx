@@ -20,7 +20,6 @@ export type BaseTextProps = RNTextProps & {
   ref?: React.Ref<RNText>;
 };
 
-
 /**
  * Primitive text component that applies global text configuration from TextComponentProvider.
  *
@@ -54,3 +53,5 @@ export const BaseText = (props: BaseTextProps) => {
 
   return <RNText {...mergedProps} />;
 };
+
+BaseText.displayName = "Aether.Primitive.BaseText";
