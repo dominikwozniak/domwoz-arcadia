@@ -4,12 +4,13 @@ iOS-first React Native/Expo [component library (~design system~)](https://www.ux
 
 ## List of well maintained UI libraries supporting React Native
 
-Active React Native component libraries that can serve as reference implementations, building blocks, or inspiration for architecture patterns and API design.
+Active React Native component libraries / project / repositories that can serve as reference implementations, building blocks, or inspiration for architecture patterns and API design.
 
 - [HeroUI Native](https://github.com/heroui-inc/heroui-native/tree/alpha)
 - [RN Primitives](https://github.com/roninoss/rn-primitives)
 - [React Native Reusables](https://github.com/founded-labs/react-native-reusables)
 - [Glow UI](https://github.com/rit3zh/glow-ui)
+- [Expo UI Playground](https://github.com/betomoedano/expo-ui-playground)
 
 ## List of design systems and component libraries for inspiration (not React Native specific)
 
@@ -28,3 +29,5 @@ Foundational resources covering component patterns, accessibility standards, and
 - [Typography](https://www.designsystems.com/typography-guides/) in Design Systems
 - [Spacing](https://www.designsystems.com/space-grids-and-layouts/) in Design Systems
 - [Iconography](https://www.designsystems.com/iconography-guide/) in Design Systems
+- [Expo UI](https://docs.expo.dev/versions/latest/sdk/ui/) a set of Jetpack Compose and SwiftUI components provided by Expo
+- [Integrating iOS 26 Liquid Glass app with Expo UI and SwiftUI](https://expo.dev/blog/liquid-glass-app-with-expo-ui-and-swiftui)
