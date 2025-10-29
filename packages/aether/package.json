@@ -9,6 +9,8 @@
     "./*": "./src/*.ts",
     "./tailwind/theme.css": "./src/tailwind/theme.css",
     "./stories/Button": "./src/components/Button/Button.stories.tsx",
+    "./stories/VStack": "./src/ui/layout/VStack.stories.tsx",
+    "./stories/HStack": "./src/ui/layout/HStack.stories.tsx",
     "./providers": "./src/providers/index.ts",
     "./primitives": "./src/primitives/index.ts"
   },
