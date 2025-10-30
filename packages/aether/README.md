@@ -31,3 +31,5 @@ Foundational resources covering component patterns, accessibility standards, and
 - [Iconography](https://www.designsystems.com/iconography-guide/) in Design Systems
 - [Expo UI](https://docs.expo.dev/versions/latest/sdk/ui/) a set of Jetpack Compose and SwiftUI components provided by Expo
 - [Integrating iOS 26 Liquid Glass app with Expo UI and SwiftUI](https://expo.dev/blog/liquid-glass-app-with-expo-ui-and-swiftui)
+- [iOS 26 Liquid Glass](https://www.figma.com/community/file/1514237154489556536) Figma UI Kit
+- [iOS and iPadOS 26](https://www.figma.com/community/file/1527721578857867021) FIgma UI Kit
