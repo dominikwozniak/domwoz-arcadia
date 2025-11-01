@@ -9,7 +9,7 @@ import "react-native-reanimated";
 
 import { useColorScheme } from "~/hooks/use-color-scheme";
 
-import "~/globals.css";
+import "../globals.css";
 
 export const unstable_settings = {
   anchor: "(tabs)",

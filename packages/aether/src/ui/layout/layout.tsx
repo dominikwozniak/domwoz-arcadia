@@ -23,7 +23,7 @@ export function VStack<C extends RNComponentType = typeof View>({
   ...props
 }: PolymorphicComponentProps<C>) {
   const Component = as ?? View;
-  return <Component {...props} className={cnx("flex flex-col", className)} />;
+  return <Component className={cnx("flex flex-col", className)} {...props} />;
 }
 
 VStack.displayName = "Aether.UI.layout.VStack";
@@ -50,7 +50,7 @@ export function HStack<C extends RNComponentType = typeof View>({
   ...props
 }: PolymorphicComponentProps<C>) {
   const Component = as ?? View;
-  return <Component {...props} className={cnx("flex", className)} />;
+  return <Component className={cnx("flex flex-row", className)} {...props} />;
 }
 
 HStack.displayName = "Aether.UI.layout.HStack";

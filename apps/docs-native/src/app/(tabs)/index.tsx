@@ -38,9 +38,6 @@ export default function HomeScreen() {
           </ThemedText>{" "}
           to open developer tools.
         </ThemedText>
-        <View className="mt-4 p-4 border border-dashed border-gray-500">
-          <Text>TEST</Text>
-        </View>
 
         {/* Test Aether Theme Variables */}
         <View className="mt-aether-md p-aether-lg bg-aether-primary rounded-lg">

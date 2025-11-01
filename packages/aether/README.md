@@ -11,6 +11,7 @@ Active React Native component libraries / project / repositories that can serve 
 - [React Native Reusables](https://github.com/founded-labs/react-native-reusables)
 - [Glow UI](https://github.com/rit3zh/glow-ui)
 - [Expo UI Playground](https://github.com/betomoedano/expo-ui-playground)
+- [Expo React Conf App](https://github.com/expo/react-conf-app)
 
 ## List of design systems and component libraries for inspiration (not React Native specific)
 

@@ -84,6 +84,33 @@ alias: {
 
 This allows Aether stories to use `~/_story-components/box` imports that Metro can resolve.
 
+### Tailwind v4 Monorepo Configuration
+
+Tailwind CSS v4 uses automatic content detection, but in monorepo setups it only scans the local package by default. To generate utilities for classes used in `@repo/aether`, we use the `@source` directive.
+
+**Configuration:** `src/globals.css`
+
+```css
+@import 'tailwindcss';
+@import 'uniwind';
+
+/* Tailwind v4: Explicitly scan monorepo packages for utility class generation */
+@source "../../packages/aether/src";
+
+@import '@repo/aether/tailwind/theme.css';
+```
+
+**Why This Matters**:
+- Without `@source`, only theme tokens from `theme.css` work (e.g., `bg-aether-primary`)
+- Standard Tailwind utilities (e.g., `bg-blue-600`, `px-4`, `gap-4`) won't be generated
+- The directive tells Tailwind to scan the Aether package and generate all needed utilities
+
+**Required for**:
+- Layout component styling (`gap-4`, `items-center`, `flex-col`)
+- Color utilities (`bg-blue-600`, `text-white`)
+- Spacing utilities (`px-4`, `py-2`, `mb-2`)
+- All standard Tailwind classes used in Aether components
+
 ## Examples
 
 ### Button Stories
@@ -144,3 +171,11 @@ This allows Aether stories to use `~/_story-components/box` imports that Metro c
 - Clear cache: `rm -rf node_modules/.cache`
 - Reset Metro: `pnpm start --reset-cache`
 - Rebuild: `cd ios && xcodebuild clean && cd ..`
+
+### Tailwind utilities not working
+**Symptom**: Components render but have no styling (transparent backgrounds, no padding)
+**Cause**: Tailwind v4 not scanning monorepo packages for class names
+**Solution**:
+1. Verify `@source "../../packages/aether/src"` is in `src/globals.css`
+2. Restart Metro bundler: Stop (Ctrl+C) → `pnpm ios`
+3. Check Metro logs for CSS compilation messages

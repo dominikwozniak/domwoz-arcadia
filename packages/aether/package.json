@@ -11,6 +11,7 @@
     "./stories/Button": "./src/components/Button/Button.stories.tsx",
     "./stories/VStack": "./src/ui/layout/VStack.stories.tsx",
     "./stories/HStack": "./src/ui/layout/HStack.stories.tsx",
+    "./ui/layout": "./src/ui/layout/index.ts",
     "./providers": "./src/providers/index.ts",
     "./primitives": "./src/primitives/index.ts"
   },
@@ -26,15 +27,15 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "19.1.1",
     "eslint": "^9.34.0",
+    "tailwindcss": "^3.4.18",
     "typescript": "5.9.2"
   },
   "dependencies": {
+    "nativewind": "^4.2.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-native": "0.81.4",
     "tailwind-merge": "^3.3.1",
-    "tailwind-variants": "^3.1.1",
-    "tailwindcss": "^4.1.16",
-    "uniwind": "1.0.0-rc.5"
+    "tailwind-variants": "^3.1.1"
   }
 }

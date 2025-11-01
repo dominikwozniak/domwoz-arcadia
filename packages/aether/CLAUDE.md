@@ -324,6 +324,51 @@ export { Story1, Story2, Story3 };
 
 This pattern ensures Metro's `require.context` can properly discover stories.
 
+## Tailwind v4 Monorepo Requirements
+
+### Content Scanning Configuration
+
+**Important**: Consuming apps must configure Tailwind v4 to scan the Aether package for utility class generation.
+
+Tailwind CSS v4 uses automatic content detection, but in monorepo setups it only scans the consuming app's files by default. To generate utilities for classes used in Aether components, consuming apps need to add the `@source` directive.
+
+**Example** (`apps/docs-native/src/globals.css`):
+
+```css
+@import 'tailwindcss';
+@import 'uniwind';
+
+/* Scan Aether package for utility class generation */
+@source "../../packages/aether/src";
+
+@import '@repo/aether/tailwind/theme.css';
+```
+
+### Why This Matters
+
+**Without `@source` directive:**
+- ❌ Only theme tokens work (e.g., `bg-aether-primary` from `theme.css`)
+- ❌ Standard Tailwind utilities fail (e.g., `bg-blue-600`, `px-4`, `gap-4`)
+- ❌ Layout components appear unstyled (transparent, no padding)
+- ❌ Story helpers like Box component don't render
+
+**With `@source` directive:**
+- ✅ All Tailwind utilities generate correctly
+- ✅ Layout components (VStack, HStack) render with proper spacing
+- ✅ Story helpers display with proper styling
+- ✅ Custom components use full Tailwind feature set
+
+### Setup Checklist for Consuming Apps
+
+1. **Install dependencies**: `tailwindcss` and `uniwind`
+2. **Configure Metro**: Use `withUniwindConfig` wrapper
+3. **Create globals.css**: Import Tailwind, uniwind, and Aether theme
+4. **Add @source directive**: Point to `../../packages/aether/src` (adjust path for your setup)
+5. **Import globals.css**: In app entry point and Storybook preview
+6. **Restart Metro**: Required for CSS regeneration
+
+See `apps/docs-native/CLAUDE.md` for complete integration example.
+
 ## Utilities
 
 ### Class Name Helpers

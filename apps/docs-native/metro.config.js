@@ -1,5 +1,5 @@
 const { getDefaultConfig } = require("expo/metro-config");
-const { withUniwindConfig } = require("uniwind/metro");
+const { withNativeWind } = require('nativewind/metro');
 const withStorybook = require("@storybook/react-native/metro/withStorybook");
 
 const path = require("path");
@@ -18,12 +18,9 @@ config.resolver.nodeModulesPaths = [
 
 config.resolver.disableHierarchicalLookup = true;
 
-const configWithUniwind = withUniwindConfig(config, {
-  cssEntryFile: "./src/globals.css",
-  dtsFile: './src/uniwind-types.d.ts'
-});
+const configWithNativewind = withNativeWind(config, { input: './src/globals.css' })
 
-module.exports = withStorybook(configWithUniwind, {
+module.exports = withStorybook(configWithNativewind, {
   // enabled: true,
   // configPath: path.resolve(projectRoot, './.storybook'),
 });

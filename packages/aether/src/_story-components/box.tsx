@@ -19,8 +19,8 @@ export function Box({
   className?: string;
 }) {
   return (
-    <View className={cnx("rounded-lg bg-blue-600 px-4 py-2", className)}>
-      <Text className="text-sm text-white font-medium text-center">
+    <View className={cnx("rounded-lg bg-blue-500 px-4 py-2", className)}>
+      <Text className="text-sm text-black font-medium text-center">
         {children}
       </Text>
     </View>
