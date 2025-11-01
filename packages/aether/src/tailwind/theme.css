@@ -1,3 +1,14 @@
+/**
+ * DEPRECATED: This file is no longer used with nativewind (Tailwind CSS v3).
+ *
+ * The @theme directive is a Tailwind v4 feature and doesn't work in v3.
+ * Theme configuration has been moved to tailwind.config.js files.
+ *
+ * See:
+ * - packages/aether/tailwind.config.js - Source of truth for theme
+ * - apps/docs-native/tailwind.config.js - Consuming app config
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

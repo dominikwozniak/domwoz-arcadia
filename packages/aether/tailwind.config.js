@@ -1,10 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // NOTE: Update this to include the paths to all files that contain Nativewind classes.
-  content: ["./src/**/*.{js,ts,tsx}"],
-  presets: [require("nativewind/preset")],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        aether: {
+          primary: '#6366f1',
+          secondary: '#8b5cf6',
+          accent: '#ec4899',
+        },
+        // Story helper colors
+        blue: '#3b82f6',
+      },
+      spacing: {
+        'aether-sm': '0.5rem',
+        'aether-md': '1rem',
+        'aether-lg': '2rem',
+      },
+    },
   },
   plugins: [],
-};
+}

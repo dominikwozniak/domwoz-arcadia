@@ -1,6 +1,7 @@
 import { Image } from "expo-image";
 import { Platform, StyleSheet, View, Text } from "react-native";
 import { aether } from "@repo/aether";
+import { HStack } from "@repo/aether/ui/layout";
 
 import { HelloWave } from "~/components/hello-wave";
 import ParallaxScrollView from "~/components/parallax-scroll-view";
@@ -38,6 +39,10 @@ export default function HomeScreen() {
           </ThemedText>{" "}
           to open developer tools.
         </ThemedText>
+        <HStack className="bg-aether-primary p-4">
+          <Text className="w-1/2">HS TEST</Text>
+          <Text className="w-1/2">TEST</Text>
+        </HStack>
 
         {/* Test Aether Theme Variables */}
         <View className="mt-aether-md p-aether-lg bg-aether-primary rounded-lg">
